@@ -1,17 +1,10 @@
 require("theprimeagen.set")
 require("theprimeagen.remap")
 require("theprimeagen.lazy_init")
+require("theprimeagen.filetype")
 
--- DO.not
--- DO NOT INCLUDE THIS
-
--- If i want to keep doing lsp debugging
--- function restart_htmx_lsp()
---     require("lsp-debug-tools").restart({ expected = {}, name = "htmx-lsp", cmd = { "htmx-lsp", "--level", "DEBUG" }, root_dir = vim.loop.cwd(), });
--- end
-
--- DO NOT INCLUDE THIS
--- DO.not
+vim.cmd([[filetype plugin indent on]])
+vim.cmd([[syntax on]])
 
 local augroup = vim.api.nvim_create_augroup
 local ThePrimeagenGroup = augroup('ThePrimeagen', {})
@@ -53,6 +46,7 @@ autocmd('BufEnter', {
             vim.cmd.colorscheme("tokyonight-night")
         else
             vim.cmd.colorscheme("rose-pine-moon")
+            ColorMyPencils()
         end
     end
 })
