@@ -1,13 +1,13 @@
 return {
-    "nvim-lualine/lualine.nvim",
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
+  "nvim-lualine/lualine.nvim",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  opts = {
+    options = {
+      theme = "auto",
+      section_separators = "",
+      component_separators = "",
     },
-    opts = {
-        options = {
-            theme = "catppuccin",
-            section_separators = "",
-            component_separators = "",
-        },
-    },
+  },
 }
